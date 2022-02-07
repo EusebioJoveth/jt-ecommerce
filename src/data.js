@@ -31,18 +31,58 @@ export const categorias = [
         title: "Blusas",
     },
     {
-        id: 1,
+        id: 2,
         img: "https://cdn.pixabay.com/photo/2016/05/13/19/30/girl-with-a-cloth-1390693_960_720.jpg",
         title: "Vestido"
     },
     {
-        id: 1,
+        id: 3,
         img: "https://cdn.pixabay.com/photo/2013/07/12/18/20/shoes-153310_960_720.png",
         title: "Calçados"
     },
     {
-        id: 1,
+        id: 4,
         img: "https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg",
         title: "Computador"
     }
+]
+
+export const maisComprados = [
+    {
+        id:1,
+        img: "https://cdn.pixabay.com/photo/2013/07/12/18/20/shoes-153310_960_720.png",
+
+    },
+    {
+        id:2,
+        img: "https://cdn.pixabay.com/photo/2017/07/02/19/24/dumbbells-2465478_960_720.jpg",
+        
+    },
+    {
+        id:3,
+        img: "https://cdn.pixabay.com/photo/2016/11/19/18/06/feet-1840619_960_720.jpg",
+        
+    },
+    {
+        id:4,
+        img: "https://cdn.pixabay.com/photo/2016/12/10/16/57/shoes-1897708_960_720.jpg",
+        
+    },
+    {
+        id:5,
+        img: "https://cdn.pixabay.com/photo/2020/05/03/19/09/nike-5126389_960_720.jpg",
+    },
+    {
+        id:6,
+        img: "https://cdn.pixabay.com/photo/2020/07/15/18/26/footwear-5408643_960_720.jpg",
+    },
+    {
+        id:7,
+        img: "https://png.pngtree.com/png-vector/20220101/ourmid/pngtree-trendy-shoes-sneakers-purple-colour-flat-illustration-png-image_4161667.png",
+    },
+    {
+        id:8,
+        img: "https://cdn.pixabay.com/photo/2013/07/13/10/41/hat-157581_960_720.png",
+    },
+    
 ]
