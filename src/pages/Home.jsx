@@ -1,5 +1,6 @@
 import React from 'react';
 import Anuncio from '../components/Anuncio';
+import Boletinnoticia from '../components/Boletinnoticia';
 import Categoria from '../components/Categoria';
 import Navbar from '../components/Navbar';
 import { Produtos } from '../components/Produtos';
@@ -13,6 +14,7 @@ const Home = () => {
           <Slider />
           <Categoria />
           <Produtos />
+          <Boletinnoticia />
       </div>
   )
 };
