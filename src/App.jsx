@@ -1,9 +1,10 @@
-import Home from "./pages/Home";
+
+import ProdutoList from "./pages/ProdutoList";
 
 function App() {
   return (
    
-   <Home />
+   <ProdutoList />
   );
 }
 

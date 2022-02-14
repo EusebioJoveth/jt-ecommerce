@@ -11,7 +11,7 @@ justify-content: space-between;
 
 `;
 
-export const Produtos = () => {
+const Produtos = () => {
   return (
       <Container>
           {maisComprados.map((item) => (
@@ -21,3 +21,5 @@ export const Produtos = () => {
       </Container>
   )
 };
+
+export default Produtos;
