@@ -1,4 +1,4 @@
-import React from 'react'
+import {useState} from 'react'
 import styled from "styled-components";
 import Navbar from "../components/Navbar"; 
 import Anuncio from "../components/Anuncio";
@@ -6,6 +6,7 @@ import {Produtos} from "../components/Produtos";
 import Boletinnoticia from "../components/Boletinnoticia";
 import Footer from "../components/Footer";
 import { mobile } from '../responsive';
+import { useLocation } from 'react-router-dom';
 
 const Container = styled.div`
 `;
@@ -40,6 +41,22 @@ const Option = styled.option`
 `;
 
 const ProdutoList = () => {
+
+    const location = useLocation(); //Pega a rota na url
+    const cat = location.pathname.split("/")[2];
+    const [filters, setFilter] = useState({});
+    const [ordena, setOrdena] = useState("Mais novo");
+
+    const handleFilters = (e) =>{
+        const value = e.target.value;
+
+        setFilter({
+            ...filters,
+            [e.target.name]: value,
+        });
+    }
+    
+
   return (
     <Container>
         <Navbar />
@@ -48,8 +65,8 @@ const ProdutoList = () => {
         <FilterContainer>
             <Filter>
                 <FilterText>Filtrar Produtos:</FilterText>
-                <Select>
-                    <Option disabled selected>Cor</Option>
+                <Select name='cor' onChange={handleFilters}>
+                    <Option disabled>Cor</Option>
                     <Option>Branco</Option>
                     <Option>Preto</Option>
                     <Option>Vermelho</Option>
@@ -57,8 +74,8 @@ const ProdutoList = () => {
                     <Option>Amarelo</Option>
                     <Option>Verde</Option>
                 </Select>
-                <Select>
-                    <Option disabled selected>Tamanho</Option>
+                <Select name='tamanho' onChange={handleFilters}>
+                    <Option disabled >Tamanho</Option>
                     <Option>XS</Option>
                     <Option>S</Option>
                     <Option>M</Option>
@@ -68,14 +85,14 @@ const ProdutoList = () => {
             </Filter>
             <Filter>
                 <FilterText>Classificar Produtos:</FilterText>
-                <Select>
-                    <Option selected>Mais novo</Option>
-                    <Option>Preço (asc)</Option>
-                    <Option>Preço (desc)</Option>
+                <Select onChange={(e)=> setOrdena(e.target.value)}>
+                    <Option value="Mais novo">Mais novo</Option>
+                    <Option value="asc">Preço (asc)</Option>
+                    <Option value="desc">Preço (desc)</Option>
                 </Select>
             </Filter>
         </FilterContainer>
-        <Produtos />
+        <Produtos cat={cat} filters={filters} sort={ordena} />
         <Boletinnoticia />
         <Footer />
     </Container>

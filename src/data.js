@@ -42,7 +42,7 @@ export const categorias = [
         id: 3,
         img: "https://cdn-0.imagensemoldes.com.br/wp-content/uploads/2020/04/Imagem-de-Sapato-em-PNG.png",
         title: "Tênis",
-        cat:"calçado"
+        cat:"calcado"
     },
     {
         id: 4,
@@ -53,7 +53,7 @@ export const categorias = [
     {
         id: 5,
         img: "http://1.bp.blogspot.com/-QtihBVl0UCo/Ue8WVCAUGgI/AAAAAAAAArU/7aVAr6f8qTU/s1600/cal%C3%A7a2-universoPNG.png",
-        title: "Calças",
+        title: "Calcas",
         cat:"Mascolino"
     },
 ]

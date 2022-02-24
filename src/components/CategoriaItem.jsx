@@ -59,4 +59,3 @@ const CategoriaItem = ({item}) => {
 };
 
 export default CategoriaItem;
-//<Link to="/">Home</Link> |{" "}
