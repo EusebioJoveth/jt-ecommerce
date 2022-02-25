@@ -12,27 +12,43 @@ justify-content: space-between;
 
 `;
 
-export const Produtos = (categoria, filtros, ordena) => {
+export const Produtos = (props) => {
   const [produtos, setProdutos] = useState([]);
   const [prodFiltered, setProdFiltered] = useState([]);
 
   useEffect (()=>{
     const getProdutos = async() =>{
       try{
-        const res = await axios.get("http://localhost:5000/api/products");
-        console.log(res)
-
+        const res = await axios.get(
+          props.cat?`http://localhost:5000/api/products?category=${props.cat}`
+          : "http://localhost:5000/api/products"
+          );
+          setProdutos(res.data);
       }catch(err){
 
       }
     };
-    getProdutos()
+    getProdutos();
+  }, [props.cat]);
 
-  }, [categoria])
+  useEffect( () =>{
+   console.log(props.filters)
+ 
+     setProdFiltered(
+      produtos.filter((item) =>
+      Object.entries(props.filters).every(([key, value]) =>
+         item[key].includes(value)
+      )
+    )
+     );
+
+   
+
+  }, [produtos, props.cat, props.filters]);
 
   return (
       <Container>
-          {maisComprados.map((item) => (
+          {prodFiltered.map((item) => (
               <Produto item={item} key={item.id} />
 
          ))}

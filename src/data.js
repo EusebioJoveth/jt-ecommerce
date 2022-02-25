@@ -29,13 +29,13 @@ export const categorias = [
         id: 1,
         img: "https://4.bp.blogspot.com/-fzVzsbau9hI/TpFKDV4DLJI/AAAAAAAAAmI/j_nXcBZOgLg/s1600/Blusa+1.png",
         title: "Blusas",
-        cat:"mulher"
+        cat:"Mulher"
     },
     {
         id: 2,
         img: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8d621dd0-d28f-435f-a8d9-97900065da8b/dbfplrd-a2111ba7-f545-4d9a-bc51-f5cf893927ff.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sIm9iaiI6W1t7InBhdGgiOiIvZi84ZDYyMWRkMC1kMjhmLTQzNWYtYThkOS05NzkwMDA2NWRhOGIvZGJmcGxyZC1hMjExMWJhNy1mNTQ1LTRkOWEtYmM1MS1mNWNmODkzOTI3ZmYucG5nIn1dXX0.Ad_SDk4k8lFhNNpVjHkuhzohh7pK4lzVldinNa0ur2k",
         title: "Vestidos",
-        cat:"mulher"
+        cat:"Mulher"
     },
     
     {
@@ -54,7 +54,7 @@ export const categorias = [
         id: 5,
         img: "http://1.bp.blogspot.com/-QtihBVl0UCo/Ue8WVCAUGgI/AAAAAAAAArU/7aVAr6f8qTU/s1600/cal%C3%A7a2-universoPNG.png",
         title: "Calcas",
-        cat:"Mascolino"
+        cat:"Masculino"
     },
 ]
 

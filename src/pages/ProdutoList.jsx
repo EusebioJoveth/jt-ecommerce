@@ -54,9 +54,8 @@ const ProdutoList = () => {
             ...filters,
             [e.target.name]: value,
         });
-    }
+    };
     
-
   return (
     <Container>
         <Navbar />
@@ -67,11 +66,11 @@ const ProdutoList = () => {
                 <FilterText>Filtrar Produtos:</FilterText>
                 <Select name='cor' onChange={handleFilters}>
                     <Option disabled>Cor</Option>
-                    <Option>Branco</Option>
-                    <Option>Preto</Option>
-                    <Option>Vermelho</Option>
+                    <Option>Branca</Option>
+                    <Option>Preta</Option>
+                    <Option>Vermelha</Option>
                     <Option>Azul</Option>
-                    <Option>Amarelo</Option>
+                    <Option>Amarela</Option>
                     <Option>Verde</Option>
                 </Select>
                 <Select name='tamanho' onChange={handleFilters}>
